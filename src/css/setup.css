@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "title";
+  src: url("/fonts/gratis-webfont.woff2") format("woff2"),
+    url("/fonts/gratis-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "text";
+  src: url("/fonts/century-webfont.woff2") format("woff2"),
+    url("/fonts/century-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --black: #111111;
+  --shadowColor: #0a0a0a;
+  --white: #d9d9d9;
+  --red: #f13343;
+  --salmon: #c24747;
+  --ease: cubic-bezier(0.86, 0, 0.14, 1);
+  --title: title, sans-serif;
+  --text: text, sans-serif;
+  --border: solid 7rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: 0.052083333333333336vw;
+}
+body {
+  font-size: 12rem;
+
+  background-color: var(--black);
+  color: var(--white);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+main {
+  min-width: 100%;
+
+  min-height: 100vh;
+}
+
+span {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  font-size: inherit;
+  font-family: inherit;
+  vertical-align: bottom; 
+}
+
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}

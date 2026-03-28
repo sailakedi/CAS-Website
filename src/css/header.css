@@ -1,0 +1,154 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50rem;
+  left: 50rem;
+  z-index: 800;
+}
+
+.logo-top-container,
+.logo-bottom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.t-b1,
+.t-b2,
+.t-b3,
+.t-b4,
+.t-b5,
+.t-b6,
+.b-b1,
+.b-b2,
+.b-b3,
+.b-b4,
+.b-b5,
+.b-b6 {
+  position: absolute;
+}
+
+.burger {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 50rem;
+  right: 50rem;
+  z-index: 800;
+}
+.burger-top-container {
+  position: relative;
+}
+.burger-t-b0,
+.burger-t-b1,
+.burger-t-b2,
+.burger-t-b3,
+.burger-t-b4 {
+  position: absolute;
+}
+/* ?menu */
+.menu,
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 100;
+  backdrop-filter: brightness(1);
+  transition: backdrop-filter 1s var(--ease);
+  pointer-events: none;
+}
+.menu-top,
+.menu-bottom,
+.loader-top,
+.loader-bottom {
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  left: 0;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.menu-bottom,
+.loader-bottom {
+  top: 50%;
+  background-color: var(--black);
+}
+.menu-top,
+.loader-top {
+  bottom: 50%;
+  background-color: var(--black);
+}
+.menu-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: var(--title);
+  font-size: 22vh;
+  letter-spacing: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-content .menu-link-container {
+  align-items: center;
+  /* background-color: red; */
+  position: relative;
+  line-height: 1;
+  width: 100%;
+  overflow: hidden;
+}
+.menu-content .menu-link-container a {
+  text-transform: uppercase;
+  color: var(--red);
+  text-decoration: none;
+  display: block;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  transition: transform 1s var(--ease);
+}
+
+.menu-content .menu-item-container:nth-child(2) a,
+.menu-content .menu-item-container:nth-child(4) a {
+  text-align: right;
+  left: 30rem;
+  transform: translateY(100%);
+}
+.menu-content .menu-item-container:nth-child(1) a,
+.menu-content .menu-item-container:nth-child(3) a {
+  text-align: left;
+  transform: translateY(-100%);
+  left: -30rem;
+}
+/* fragment of the menu */
+.menu-item-container {
+  position: relative;
+}
+.menu-item-container .link-fragment {
+  position: absolute;
+  top: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow: hidden;
+  width: 100%;
+}
+.menu-item-container .link-fragment {
+  text-align: right;
+  right: -30rem;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out 0.8s;
+}
+.menu-item-container .link-fragment div {
+  transform: translateY(100%);
+}

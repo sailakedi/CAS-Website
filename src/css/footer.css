@@ -1,0 +1,45 @@
+.footer {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black);
+  position: relative;
+  opacity: 0;
+}
+.footer * {
+  position: relative;
+  z-index: 3;
+  
+}
+
+.footer-insta {
+  top: calc(100rem + (185rem * 1.2125));
+  left: 50rem;
+}
+
+.footer-contact {
+  top: calc(100rem + (185rem * 1.2125));
+  right: 50rem;
+}
+.footer-infos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50rem;
+  font-family: var(--text);
+  font-size: 15rem;
+  display: flex;
+}
+.footer-infos p {
+  width: 100%;
+  user-select: all;
+}
+.footer-infos p:nth-child(1) {
+  text-align: left;
+}
+.footer-infos p:nth-child(2) {
+  text-align: center;
+}
+.footer-infos p:nth-child(3) {
+  text-align: right;
+}
